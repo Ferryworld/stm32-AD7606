@@ -1,18 +1,18 @@
 /*
-	* ¼ò½é£ºstm32Ì½Ë÷Õß¿ª·¢°åLEDÇý¶¯Í·ÎÄ¼þ
-	* °æ±¾£ºV1.1
-	* ×÷Õß£ºMr.WangS
-	* Ê±¼ä: 2017-8-3
-	* ÏêÏ¸£º¶¨ÒåÁËÒ»Ð©¿ØÖÆ±äÁ¿£¬ÉùÃ÷ÁËº¯Êý¡£
+    * ç®€ä»‹ï¼šstm32æŽ¢ç´¢è€…å¼€å‘æ¿LEDé©±åŠ¨å¤´æ–‡ä»¶
+    * ç‰ˆæœ¬ï¼šV1.1
+    * ä½œè€…ï¼šMr.WangS
+    * æ—¶é—´: 2017-8-3
+    * è¯¦ç»†ï¼šå®šä¹‰äº†ä¸€äº›æŽ§åˆ¶å˜é‡ï¼Œå£°æ˜Žäº†å‡½æ•°ã€‚
 */
 #ifndef __LED_H
 #define __LED_H
 #include "sys.h"
 
-/* LED ¿ØÖÆÊä³ö±äÁ¿ºê¶¨Òå£¬¿ÉÖ±½Ó¶Ô±äÁ¿¸³Öµ¿ØÖÆLEDÁÁÃð¡£1Ï¨Ãð£¬0µãÁÁ */
-#define LED0 PFout(9)	// DS0
-#define LED1 PFout(10)	// DS1	 
+/* LED æŽ§åˆ¶è¾“å‡ºå˜é‡å®å®šä¹‰ï¼Œå¯ç›´æŽ¥å¯¹å˜é‡èµ‹å€¼æŽ§åˆ¶LEDäº®ç­ã€‚1ç†„ç­ï¼Œ0ç‚¹äº® */
+#define LED0 PFout(9)   // DS0
+#define LED1 PFout(10)  // DS1
 
-/* LED¿ØÖÆÒý½Å³õÊ¼»¯ */
-void LED_Init(void);//³õÊ¼»¯		 				    
+/* LEDæŽ§åˆ¶å¼•è„šåˆå§‹åŒ– */
+void LED_Init(void);  //åˆå§‹åŒ–
 #endif

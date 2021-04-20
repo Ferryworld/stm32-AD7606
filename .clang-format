@@ -1,0 +1,89 @@
+---
+# Clang format for draco component
+BasedOnStyle: Google
+---
+Language: Cpp
+Standard: Cpp11
+# 4 space indentation
+UseTab: Never
+TabWidth: 4
+IndentWidth: 4
+ContinuationIndentWidth: 4
+# Max column size
+ColumnLimit: 120
+# Don't align parameters to bracket
+# func(param1,
+#  param2)
+AlignAfterOpenBracket: false
+AllowAllParametersOfDeclarationOnNextLine: true
+BinPackArguments: true
+BinPackParameters: true
+ExperimentalAutoDetectBinPacking: true
+# Braces break like:
+# namespace a {
+# try
+# {
+#   foo();
+# }
+# catch ()
+# {
+# }
+# void foo() { bar(); }
+# class foo
+# {};
+# if (foo())
+# {
+# }
+# else
+# {
+# }
+# enum X : int
+# {
+#   A, B
+# };
+# }
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterClass: true
+  AfterControlStatement: true
+  AfterEnum: true
+  AfterFunction: true
+  AfterNamespace: false
+  AfterStruct: true
+  AfterUnion: true
+  BeforeCatch: true
+  BeforeElse: true
+# includes order
+#  first match is applied
+IncludeCategories:
+  - Regex: '^<draco/'      # component's
+    Priority: 2
+  - Regex: '^<.*/'      # System nested (like <gtest/gtest.h>
+    Priority: 3
+  - Regex: '^".*'       # internal
+    Priority: 1
+# No indentation for access modifiers (public/protected/private)
+AccessModifierOffset: -4
+# Align pointer to type
+DerivePointerAlignment: false
+PointerAlignment: Left
+# Constructor initializer list like
+# A::A()
+#   : a(0)
+#   , b{}
+# {}
+BreakConstructorInitializersBeforeComma: true
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+ConstructorInitializerIndentWidth: 4
+# Strings rules
+AlwaysBreakBeforeMultilineStrings: false
+PenaltyBreakString: 100
+# Do not allow construct like `if (a) { return; }`
+AllowShortBlocksOnASingleLine: false
+# Do not allow construct like `if (a) return;`
+AllowShortIfStatementsOnASingleLine: false
+# Do not allow construct like `while(i>0) i--;`
+AllowShortLoopsOnASingleLine: false
+# Do not allow short functions like 'int f() { return 0; }'
+AllowShortFunctionsOnASingleLine: false
+...
